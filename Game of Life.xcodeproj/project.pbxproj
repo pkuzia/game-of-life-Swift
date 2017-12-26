@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		11B9695DC3F39E04117FEE72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EB56FE7B53F4DE31609494 /* AppDelegate.swift */; };
 		124F55DD854B9958156719F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE6D55EC58A9CCC27147DF6 /* Main.storyboard */; };
-		132E614B36DED82102F7189D /* ExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9927082D179DF732C432511F /* ExampleViewModel.swift */; };
-		29D6DFB5791F375CD5DDB115 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756660AC11F503762B4D3A3B /* ExampleViewController.swift */; };
 		3C871A44BBEFDFEF4B81DC87 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DE1B1EB3A6F182846C1935 /* StoryboardHelper.swift */; };
 		3EF04C6F09515045ADA390E6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8EAAD474CF7D6F369DE7FC /* String.swift */; };
 		60478F65E3E39F8E89063679 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5CA5E584797283ED593132 /* BaseViewModel.swift */; };
 		627909609930205073691D59 /* Localizable.strings in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBBBCFF40A464A6CEEF53C /* Localizable.strings */; };
 		93E7961237A0104371B6308B /* Pods_Game_of_Life.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B04264CACF7B1DFFC9219F81 /* Pods_Game_of_Life.framework */; };
+		975FEC0B1FDEB2CA001ECBA1 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975FEC0A1FDEB2CA001ECBA1 /* GameView.swift */; };
+		97C1ED681FDD915500AC14C7 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1ED671FDD915500AC14C7 /* GameViewModel.swift */; };
+		97C1ED691FDD924D00AC14C7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1ED641FDD912700AC14C7 /* GameViewController.swift */; };
+		97C1ED6C1FDD950F00AC14C7 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1ED6B1FDD950F00AC14C7 /* Cell.swift */; };
+		97C1ED6E1FDD95B500AC14C7 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1ED6D1FDD95B500AC14C7 /* GameBoard.swift */; };
 		9904C4FBE0134A930B1834D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0087FA29E5DE26798FF6519 /* Images.xcassets */; };
 		AAB0EEE7C927FA5BBE7A66D7 /* .swiftlint.yml in Sources */ = {isa = PBXBuildFile; fileRef = 48C0DACF0EB46428497A8569 /* .swiftlint.yml */; };
 		C475BAB8EB566EE8FB109FBA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC686828F8088DEB29FF8E54 /* BaseViewController.swift */; };
@@ -36,9 +39,12 @@
 		20EB56FE7B53F4DE31609494 /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48C0DACF0EB46428497A8569 /* .swiftlint.yml */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		6DFBBBCFF40A464A6CEEF53C /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		756660AC11F503762B4D3A3B /* ExampleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		7BCAE89BDAB3F90EDA0FD841 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9927082D179DF732C432511F /* ExampleViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExampleViewModel.swift; sourceTree = "<group>"; };
+		975FEC0A1FDEB2CA001ECBA1 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		97C1ED641FDD912700AC14C7 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		97C1ED671FDD915500AC14C7 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		97C1ED6B1FDD950F00AC14C7 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		97C1ED6D1FDD95B500AC14C7 /* GameBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
 		A0087FA29E5DE26798FF6519 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A60FBD7C03453F22896A93B6 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B04264CACF7B1DFFC9219F81 /* Pods_Game_of_Life.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Game_of_Life.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,8 +109,8 @@
 		147BC853496B5ADCEEA7B61E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				97C1ED631FDD911300AC14C7 /* GameView */,
 				DC686828F8088DEB29FF8E54 /* BaseViewController.swift */,
-				756660AC11F503762B4D3A3B /* ExampleViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -145,9 +151,36 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		97C1ED631FDD911300AC14C7 /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				97C1ED641FDD912700AC14C7 /* GameViewController.swift */,
+			);
+			path = GameView;
+			sourceTree = "<group>";
+		};
+		97C1ED661FDD913900AC14C7 /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				97C1ED671FDD915500AC14C7 /* GameViewModel.swift */,
+			);
+			path = GameView;
+			sourceTree = "<group>";
+		};
+		97C1ED6A1FDD950300AC14C7 /* GameModel */ = {
+			isa = PBXGroup;
+			children = (
+				97C1ED6D1FDD95B500AC14C7 /* GameBoard.swift */,
+				97C1ED6B1FDD950F00AC14C7 /* Cell.swift */,
+				975FEC0A1FDEB2CA001ECBA1 /* GameView.swift */,
+			);
+			path = GameModel;
+			sourceTree = "<group>";
+		};
 		9D1C06EEAF1D7AAC852DC3D0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				97C1ED6A1FDD950300AC14C7 /* GameModel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -155,8 +188,8 @@
 		AA183DE7F8A1968FF21C7BB0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				97C1ED661FDD913900AC14C7 /* GameView */,
 				FE5CA5E584797283ED593132 /* BaseViewModel.swift */,
-				9927082D179DF732C432511F /* ExampleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -356,15 +389,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97C1ED681FDD915500AC14C7 /* GameViewModel.swift in Sources */,
 				627909609930205073691D59 /* Localizable.strings in Sources */,
 				3C871A44BBEFDFEF4B81DC87 /* StoryboardHelper.swift in Sources */,
 				3EF04C6F09515045ADA390E6 /* String.swift in Sources */,
+				97C1ED691FDD924D00AC14C7 /* GameViewController.swift in Sources */,
 				60478F65E3E39F8E89063679 /* BaseViewModel.swift in Sources */,
-				132E614B36DED82102F7189D /* ExampleViewModel.swift in Sources */,
 				C475BAB8EB566EE8FB109FBA /* BaseViewController.swift in Sources */,
-				29D6DFB5791F375CD5DDB115 /* ExampleViewController.swift in Sources */,
+				97C1ED6C1FDD950F00AC14C7 /* Cell.swift in Sources */,
 				11B9695DC3F39E04117FEE72 /* AppDelegate.swift in Sources */,
 				AAB0EEE7C927FA5BBE7A66D7 /* .swiftlint.yml in Sources */,
+				975FEC0B1FDEB2CA001ECBA1 /* GameView.swift in Sources */,
+				97C1ED6E1FDD95B500AC14C7 /* GameBoard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +435,7 @@
 				PROVISIONING_PROFILE = "4fdf1136-73f3-4260-be2b-0a17b0f9e7f3";
 				PROVISIONING_PROFILE_SPECIFIER = Development;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -540,6 +577,7 @@
 				PROVISIONING_PROFILE = "4fdf1136-73f3-4260-be2b-0a17b0f9e7f3";
 				PROVISIONING_PROFILE_SPECIFIER = Development;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
