@@ -14,6 +14,7 @@ class GameView: UIView {
     // MARK: - Variables
     
     var gameBoard: GameBoard?
+    let margin: CGFloat = 1.0
     
     // MARK: - Functions
     
@@ -21,26 +22,39 @@ class GameView: UIView {
         guard let context = UIGraphicsGetCurrentContext(), let gameBoard = gameBoard else {
             return
         }
-        
-        func fillColorForCell (state: State) -> UIColor {
-            switch state {
-            case .Alive:
-                return UIColor.blue
-            case .Dead:
-                return UIColor.lightGray
-            }
-        }
-        
-        func frameForCell (cell: Cell) -> CGRect {
-            let dimensions = CGFloat(gameBoard.dimensionsX)
-            let cellSize = CGSize(width: self.bounds.width / dimensions, height: self.bounds.width / dimensions)
-            return CGRect(x: CGFloat(cell.x) * cellSize.width, y: CGFloat(cell.y) * cellSize.height, width: cellSize.width, height: cellSize.height)
-        }
-        
         for cell in gameBoard.cells {
             context.setFillColor(fillColorForCell(state: cell.state).cgColor)
             context.addRect(frameForCell(cell: cell))
             context.fillPath()
+        }
+    }
+    
+    func cellSize() -> CGSize {
+        guard let gameBoard = gameBoard else {
+            return CGSize()
+        }
+        let dimensions = CGFloat(gameBoard.dimensionsX)
+        return CGSize(width: self.bounds.width / dimensions - margin, height: self.bounds.width / dimensions - margin)
+    }
+    
+    fileprivate func frameForCell (cell: Cell) -> CGRect {
+        guard let gameBoard = gameBoard else {
+            return CGRect()
+        }
+        
+        let dimensions = CGFloat(gameBoard.dimensionsX)
+        let cellSize = CGSize(width: self.bounds.width / dimensions - margin, height: self.bounds.width / dimensions - margin)
+        let x = CGFloat(cell.x) * cellSize.width + CGFloat(cell.x) * margin
+        let y = CGFloat(cell.y) * cellSize.height + CGFloat(cell.y) * margin
+        return CGRect(x: x, y: y, width: cellSize.width, height: cellSize.height)
+    }
+    
+    fileprivate func fillColorForCell (state: State) -> UIColor {
+        switch state {
+        case .Alive:
+            return StyleKit.colorType(color: .blueColor)
+        case .Dead:
+            return StyleKit.colorType(color: .blueBackgroundColor)
         }
     }
 }

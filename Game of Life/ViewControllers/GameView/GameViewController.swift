@@ -13,6 +13,7 @@ class GameViewController: BaseViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var gameView: GameView!
+    @IBOutlet weak var gameTitle: UILabel!
     
     let gameViewModel = GameViewModel()
     
@@ -32,26 +33,36 @@ class GameViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initUI()
         initGame()
     }
     
     // MARK: - Appearance
     
-    func initGame() {
+    fileprivate func initUI() {
+        view.backgroundColor = StyleKit.colorType(color: .gameViewBackgroundColor)
+        gameView.backgroundColor = StyleKit.colorType(color: .gameViewBackgroundColor)
+        gameTitle.attributedText = StyleKit.attributedText(text: gameViewModel.gameViewTitle, attribute: .gameTitle)
+        
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.gameViewClick (_:)))
+        gameView.addGestureRecognizer(gesture)
+        
+    }
+
+    fileprivate func initGame() {
         guard let gameBoard = gameViewModel.gameBoard else {
             return
         }
         gameView.gameBoard = gameBoard
-        
-        for _ in 0...100 {
-            let x = randLocation(dimension: .x, gameBoard: gameBoard), y = randLocation(dimension: .y, gameBoard: gameBoard)
-            if let item = gameBoard[x, y] {
-                item.state = .Alive
-            }
-        }
     }
     
     // MARK: - User Interaction
+    
+    func gameViewClick(_ sender: UITapGestureRecognizer){
+        let touchLocation = sender.location(in: gameView)
+        gameViewModel.makeAliveCell(touchLocation: touchLocation, cellSize: gameView.cellSize())
+        gameView.setNeedsDisplay()
+    }
     
     @IBAction func startButtonClickHandler(_ sender: Any) {
         gameViewModel.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self,
@@ -59,17 +70,7 @@ class GameViewController: BaseViewController {
     }
     
     // MARK: - Additional Helpers
-    
-    fileprivate func randLocation (dimension: Dimension, gameBoard: GameBoard) -> Int {
-        switch dimension {
-        case .x:
-            return Int(arc4random()) % gameBoard.dimensionsX
-        case .y:
-            return Int(arc4random()) % gameBoard.dimensionsY
-        }
-        
-    }
-    
+ 
     func gameChangeState() {
         gameViewModel.gameBoard?.calculateNewGameBoardState()
         gameView.setNeedsDisplay()

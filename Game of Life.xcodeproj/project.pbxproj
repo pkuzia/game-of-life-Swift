@@ -15,6 +15,8 @@
 		627909609930205073691D59 /* Localizable.strings in Sources */ = {isa = PBXBuildFile; fileRef = 6DFBBBCFF40A464A6CEEF53C /* Localizable.strings */; };
 		93E7961237A0104371B6308B /* Pods_Game_of_Life.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B04264CACF7B1DFFC9219F81 /* Pods_Game_of_Life.framework */; };
 		975FEC0B1FDEB2CA001ECBA1 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975FEC0A1FDEB2CA001ECBA1 /* GameView.swift */; };
+		97B5D415200B99F900DD26E6 /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5D414200B99F900DD26E6 /* StyleKit.swift */; };
+		97B5D418200BA1C100DD26E6 /* Courier New.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97B5D417200BA1BE00DD26E6 /* Courier New.ttf */; };
 		97C1ED681FDD915500AC14C7 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1ED671FDD915500AC14C7 /* GameViewModel.swift */; };
 		97C1ED691FDD924D00AC14C7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1ED641FDD912700AC14C7 /* GameViewController.swift */; };
 		97C1ED6C1FDD950F00AC14C7 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C1ED6B1FDD950F00AC14C7 /* Cell.swift */; };
@@ -41,6 +43,8 @@
 		6DFBBBCFF40A464A6CEEF53C /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7BCAE89BDAB3F90EDA0FD841 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		975FEC0A1FDEB2CA001ECBA1 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		97B5D414200B99F900DD26E6 /* StyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
+		97B5D417200BA1BE00DD26E6 /* Courier New.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Courier New.ttf"; sourceTree = "<group>"; };
 		97C1ED641FDD912700AC14C7 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		97C1ED671FDD915500AC14C7 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		97C1ED6B1FDD950F00AC14C7 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 		7027B2AFC8C2712B60FEA78F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				97B5D416200BA19200DD26E6 /* Fonts */,
 				20EB56FE7B53F4DE31609494 /* AppDelegate.swift */,
 				A0087FA29E5DE26798FF6519 /* Images.xcassets */,
 				05F3ACB33E3A17F36278E4CB /* Storyboards */,
@@ -144,11 +149,20 @@
 		924193223DBD7EB36B0026A2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				97B5D414200B99F900DD26E6 /* StyleKit.swift */,
 				6DFBBBCFF40A464A6CEEF53C /* Localizable.strings */,
 				F2DE1B1EB3A6F182846C1935 /* StoryboardHelper.swift */,
 				EE8EAAD474CF7D6F369DE7FC /* String.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		97B5D416200BA19200DD26E6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				97B5D417200BA1BE00DD26E6 /* Courier New.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		97C1ED631FDD911300AC14C7 /* GameView */ = {
@@ -317,6 +331,7 @@
 			files = (
 				9904C4FBE0134A930B1834D7 /* Images.xcassets in Resources */,
 				124F55DD854B9958156719F0 /* Main.storyboard in Resources */,
+				97B5D418200BA1C100DD26E6 /* Courier New.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97B5D415200B99F900DD26E6 /* StyleKit.swift in Sources */,
 				97C1ED681FDD915500AC14C7 /* GameViewModel.swift in Sources */,
 				627909609930205073691D59 /* Localizable.strings in Sources */,
 				3C871A44BBEFDFEF4B81DC87 /* StoryboardHelper.swift in Sources */,

@@ -9,6 +9,11 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Game View Controller-->
         <scene sceneID="V3o-MK-OOM">
@@ -23,28 +28,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KxU-DM-nhY" customClass="GameView" customModule="Game_of_Life" customModuleProvider="target">
-                                <rect key="frame" x="18.5" y="40" width="337.5" height="533.5"/>
+                                <rect key="frame" x="24" y="70" width="326.5" height="533.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPj-of-DXK">
-                                <rect key="frame" x="164" y="583.5" width="46" height="30"/>
+                                <rect key="frame" x="164" y="613.5" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="startButtonClickHandler:" destination="CIa-gD-v2P" eventType="touchUpInside" id="KbR-Ve-pxY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZq-oA-LLy">
+                                <rect key="frame" x="166" y="35" width="42" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="UPj-of-DXK" firstAttribute="centerX" secondItem="KxU-DM-nhY" secondAttribute="centerX" id="1Hu-s6-gP6"/>
                             <constraint firstItem="KxU-DM-nhY" firstAttribute="centerX" secondItem="ZBW-EI-UWQ" secondAttribute="centerX" id="1K6-Oc-oYz"/>
                             <constraint firstItem="KxU-DM-nhY" firstAttribute="height" secondItem="ZBW-EI-UWQ" secondAttribute="height" multiplier="0.8" id="6Tg-Em-XSz"/>
-                            <constraint firstItem="KxU-DM-nhY" firstAttribute="top" secondItem="Vtq-GJ-xTd" secondAttribute="bottom" constant="20" id="RJH-Rc-lvW"/>
-                            <constraint firstItem="KxU-DM-nhY" firstAttribute="width" secondItem="ZBW-EI-UWQ" secondAttribute="width" multiplier="0.9" id="Uti-33-HZ9"/>
+                            <constraint firstItem="KxU-DM-nhY" firstAttribute="top" secondItem="dZq-oA-LLy" secondAttribute="bottom" constant="15" id="FM3-lV-MLo"/>
+                            <constraint firstItem="dZq-oA-LLy" firstAttribute="centerX" secondItem="ZBW-EI-UWQ" secondAttribute="centerX" id="FPz-aM-cFf"/>
+                            <constraint firstItem="KxU-DM-nhY" firstAttribute="width" secondItem="ZBW-EI-UWQ" secondAttribute="width" multiplier="0.87" id="Uti-33-HZ9"/>
+                            <constraint firstItem="dZq-oA-LLy" firstAttribute="top" secondItem="Vtq-GJ-xTd" secondAttribute="bottom" constant="15" id="eVd-AG-VFz"/>
                             <constraint firstItem="UPj-of-DXK" firstAttribute="top" secondItem="KxU-DM-nhY" secondAttribute="bottom" constant="10" id="tg5-jw-e2g"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="gameTitle" destination="dZq-oA-LLy" id="uKY-x2-NqP"/>
                         <outlet property="gameView" destination="KxU-DM-nhY" id="7zl-UO-uNg"/>
                     </connections>
                 </viewController>

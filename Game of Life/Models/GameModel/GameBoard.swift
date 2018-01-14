@@ -17,8 +17,8 @@ class GameBoard {
     // MARK: - Variables
     
     var cells: [Cell]
-    let dimensionsX: Int = 20
-    let dimensionsY: Int = 25
+    let dimensionsX: Int = 17
+    let dimensionsY: Int = 27
     
     // MARK: - Functions
     
