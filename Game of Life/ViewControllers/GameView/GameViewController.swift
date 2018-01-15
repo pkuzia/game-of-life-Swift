@@ -15,6 +15,10 @@ class GameViewController: BaseViewController {
     @IBOutlet weak var gameView: GameView!
     @IBOutlet weak var gameTitle: UILabel!
     
+    @IBOutlet weak var randomButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var photoButton: UIButton!
+    
     let gameViewModel = GameViewModel()
     
     // MARK: - View Lifecycle
@@ -44,9 +48,21 @@ class GameViewController: BaseViewController {
         gameView.backgroundColor = StyleKit.colorType(color: .gameViewBackgroundColor)
         gameTitle.attributedText = StyleKit.attributedText(text: gameViewModel.gameViewTitle, attribute: .gameTitle)
         
+        randomButton.backgroundColor = StyleKit.colorType(color: .blueColor)
+        randomButton.layer.cornerRadius = randomButton.frame.width / 2
+        randomButton.imageEdgeInsets = UIEdgeInsets(top: 13, left: 13, bottom: 13, right: 13)
+        
+        playButton.backgroundColor = StyleKit.colorType(color: .blueColor)
+        playButton.layer.cornerRadius = randomButton.frame.width / 2
+        playButton.imageEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        
+        photoButton.backgroundColor = StyleKit.colorType(color: .blueColor)
+        photoButton.layer.cornerRadius = randomButton.frame.width / 2
+        photoButton.imageEdgeInsets = UIEdgeInsets(top: 13, left: 13, bottom: 13, right: 13)
+        playButton.tag = 0
+        
         let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.gameViewClick (_:)))
         gameView.addGestureRecognizer(gesture)
-        
     }
 
     fileprivate func initGame() {
@@ -64,13 +80,32 @@ class GameViewController: BaseViewController {
         gameView.setNeedsDisplay()
     }
     
-    @IBAction func startButtonClickHandler(_ sender: Any) {
-        gameViewModel.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self,
-                                                   selector: #selector(self.gameChangeState), userInfo: nil, repeats: true)
+    @IBAction func randomButtonClick(_ sender: Any) {
+        gameViewModel.aliveRandomCells()
+        gameView.setNeedsDisplay()
+    }
+    
+    @IBAction func photoButtonClick(_ sender: Any) {
+        
+    }
+    
+    @IBAction func startButtonClick(_ sender: Any) {
+        if playButton.tag == 0 {
+            runTimer()
+            playButton.tag = 1
+        } else {
+            gameViewModel.timer?.invalidate()
+            playButton.tag = 0
+        }
     }
     
     // MARK: - Additional Helpers
  
+    fileprivate func runTimer() {
+        gameViewModel.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self,
+                                                   selector: #selector(self.gameChangeState), userInfo: nil, repeats: true)
+    }
+    
     func gameChangeState() {
         gameViewModel.gameBoard?.calculateNewGameBoardState()
         gameView.setNeedsDisplay()
