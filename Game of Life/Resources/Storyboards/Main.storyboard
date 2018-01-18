@@ -83,7 +83,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PkJ-t1-7dh">
                                 <rect key="frame" x="130" y="588.5" width="114.5" height="78.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEI-lf-e7N">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEI-lf-e7N" customClass="StartButton" customModule="Game_of_Life" customModuleProvider="target">
                                         <rect key="frame" x="29" y="11.5" width="55" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="Yy9-rb-Bgj"/>
@@ -128,8 +128,8 @@
                         <outlet property="gameTitle" destination="dZq-oA-LLy" id="uKY-x2-NqP"/>
                         <outlet property="gameView" destination="KxU-DM-nhY" id="7zl-UO-uNg"/>
                         <outlet property="photoButton" destination="gI8-D4-wED" id="cv3-4V-JBP"/>
-                        <outlet property="playButton" destination="rEI-lf-e7N" id="KaP-Jn-4Mn"/>
                         <outlet property="randomButton" destination="Ajs-9s-N1y" id="igd-Fx-rKf"/>
+                        <outlet property="startButton" destination="rEI-lf-e7N" id="z6O-zl-sTe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMO-l8-olK" userLabel="First Responder" sceneMemberID="firstResponder"/>
