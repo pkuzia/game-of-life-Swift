@@ -224,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				924193223DBD7EB36B0026A2 /* Helpers */,
-				D676A3DDE5213279CDB53B9D /* Services */,
 				9D1C06EEAF1D7AAC852DC3D0 /* Models */,
 				8637EF7EF84EB3436AA0B193 /* Views */,
 				AA183DE7F8A1968FF21C7BB0 /* ViewModels */,
@@ -233,13 +232,6 @@
 				48C0DACF0EB46428497A8569 /* .swiftlint.yml */,
 			);
 			path = "Game of Life";
-			sourceTree = "<group>";
-		};
-		D676A3DDE5213279CDB53B9D /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		F7F1A7E1682B21D7AFB415B5 /* Frameworks */ = {
