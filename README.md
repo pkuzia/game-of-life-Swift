@@ -29,8 +29,8 @@ Each generation, or turn, in the game the following rules are applied:
 
 ## Screenshots
 
-![](Screenshots/GameOfLifeScr1.PNG)
-![](Screenshots/GameOfLifeScr2.PNG)
+![](Screenshots/GameOfLifeScr1.png)
+![](Screenshots/GameOfLifeScr2.png)
 
 ## Built With
 
