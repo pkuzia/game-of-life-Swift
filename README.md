@@ -31,6 +31,7 @@ Each generation, or turn, in the game the following rules are applied:
 
 ![](Screenshots/GameOfLifeScreen1.png)
 ![](Screenshots/GameOfLifeScreen2.png)
+![](Screenshots/GameOfLifeGif.gif)
 
 ## Built With
 
